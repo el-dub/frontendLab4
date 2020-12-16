@@ -47,4 +47,5 @@ const view = (products) => `
 </main>
 `;
 
+
 export default view;
