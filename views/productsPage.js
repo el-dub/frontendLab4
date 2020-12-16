@@ -1,6 +1,5 @@
 const view = (products) => `
 <main id="main">
-	
     <div class="container">
     		<div class="products-section">
 	    		<div class="row">
@@ -48,5 +47,7 @@ const view = (products) => `
 </main>
 `;
 
-
+products.map((product) =>{
+	console.log(product.productName);
+};
 export default view;
