@@ -9,7 +9,7 @@
     "weight": 601,
     "relatedProductIds": [7,12,98],
     "categoryId": 1
-  },
+  }
   {
     "url": "pizza_margarita",
     "productName": "Пицца Маргарита",
@@ -19,7 +19,7 @@
     "weight": 572,
     "relatedProductIds": [7,12,98],
     "categoryId": 1
-  },
+  }
   {
     "url": "pizza_texas",
     "productName": "Пицца Техас",
@@ -29,7 +29,7 @@
     "weight": 620,
     "relatedProductIds": [7,12,98],
     "categoryId": 1
-  },
+  }
   {
     "url": "pizza_hawaii",
     "productName": "Пицца Гавайская",
@@ -39,7 +39,7 @@
     "weight": 642,
     "relatedProductIds": [7,12,98],
     "categoryId": 1
-  },
+  }
   {
     "url": "pizza_bbq",
     "productName": "Пицца Барбекю",
@@ -49,7 +49,7 @@
     "weight": 616,
     "relatedProductIds": [7,12,98],
     "categoryId": 1
-  },
+  }
   {
     "url": "pizza_5cheeses",
     "productName": "Пицца Пять Сыров",
@@ -59,7 +59,7 @@
     "weight": 600,
     "relatedProductIds": [7,12,98],
     "categoryId": 1
-  },
+  }
   {
     "url": "drinks_water_g",
     "productName": "BonAqua г",
@@ -69,7 +69,7 @@
     "weight": 500,
     "relatedProductIds": [7,12,98],
     "categoryId": 2
-  },
+  }
   {
     "url": "drinks_water_ng",
     "productName": "BonAqua н/г",
@@ -79,7 +79,7 @@
     "weight": 500,
     "relatedProductIds": [7,12,98],
     "categoryId": 2
-  },
+  }
   {
     "url": "drinks_cola",
     "productName": "Coca-Cola",
@@ -89,7 +89,7 @@
     "weight": 500,
     "relatedProductIds": [7,12,98],
     "categoryId": 2
-  },
+  }
   {
     "url": "drinks_fanta",
     "productName": "Fanta Апельсин",
@@ -99,7 +99,7 @@
     "weight": 500,
     "relatedProductIds": [7,12,98],
     "categoryId": 2
-  },
+  }
   {
     "url": "desserts_vanilla_maffin",
     "productName": "Ванильный маффин",
@@ -109,7 +109,7 @@
     "weight": 90,
     "relatedProductIds": [7,12,98],
     "categoryId": 3
-  },
+  }
   
   {
     "url": "desserts_chocolate_maffin",
@@ -120,7 +120,7 @@
     "weight": 90,
     "relatedProductIds": [7,12,98],
     "categoryId": 3
-  },
+  }
   {
     "url": "desserts_baitsy",
     "productName": "Байтсі с корицей",
