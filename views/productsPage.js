@@ -47,7 +47,4 @@ const view = (products) => `
 </main>
 `;
 
-products.map((product) =>{
-	console.log(product.productName);
-};
 export default view;
