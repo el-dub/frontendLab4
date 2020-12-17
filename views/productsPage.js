@@ -3,7 +3,7 @@ const view = (products) => `
     <div class="container">
     		<div class="products-section">
 	    		<div class="row">
-	    		${products.map((product) => `
+	    		${products.map((product => `
 		    		<div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12">
 		    			<div class="bs-component">
 		    				<div class="card mb-3">
@@ -41,7 +41,7 @@ const view = (products) => `
 							</div>
 		    			</div>
 		    		</div>	
-		    	`)}
+		    	`))}
 		        </div>
 	    	</div>
     	</div>
