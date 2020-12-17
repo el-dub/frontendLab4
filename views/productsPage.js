@@ -3,10 +3,10 @@ const view = (products) => `
     <div class="container">
     		<div class="products-section">
 	    		<div class="row">
-	    		${products.map((product) => `
 		    		<div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12">
 		    			<div class="bs-component">
 		    				<div class="card mb-3">
+		    				${products.map((product) => `
 							  <div class="product-image mb-1 mt-1">
 							  	<img src=${product.image} alt=${product.productName}>
 							  	<!-- <div class="dp-product-block__weight">${product.weight}</div> -->
@@ -37,10 +37,10 @@ const view = (products) => `
 						          	<button type="button" class="btn btn-primary">В корзину</button>
 						        </div>
 					          </div>
+					        `)}
 							</div>
 		    			</div>
-		    		</div>
-		    		`)}
+		    		</div>	
 		        </div>
 	    	</div>
     	</div>
