@@ -9,7 +9,6 @@ const view = (products) => `
 		    				<div class="card mb-3">
 							  <div class="product-image mb-1 mt-1">
 							  	<img src=${product.image} alt=${product.productName}>
-							  	<!-- <div class="dp-product-block__weight">${product.weight}</div> -->
 							  </div>
 							  <div class="card-body">
 							    <h5 class="card-title">${product.productName}</h5>
@@ -41,7 +40,7 @@ const view = (products) => `
 							</div>
 		    			</div>
 		    		</div>	
-		    	`))}
+		    	`)).join("\n")}
 		        </div>
 	    	</div>
     	</div>
