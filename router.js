@@ -3,8 +3,12 @@ class Router {
         let viewName = '';
         let endpointName = '';
         switch (window.location.hash.split('#')[1]) {
-            case 'products':
+            case 'catalog':
                 viewName = 'productsPage';
+                endpointName = 'products';
+                break;
+            case 'order':
+                viewName = 'orderPage';
                 endpointName = 'products';
                 break;
             default:
