@@ -8,7 +8,7 @@ const templateProcessor = new TemplateProcessor();
 const client = new Client();
 
 window.onhashchange = () => {
-    const { viewName, endpointName } = router.getCurrentState();
+    { viewName, endpointName } = router.getCurrentState();
     let view;
 	import(`./views/${viewName}.js`)
 	    .then((viewModule) =>  {
