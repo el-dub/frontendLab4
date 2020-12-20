@@ -15,7 +15,7 @@ window.onhashchange = () => {
 	        view = viewModule.default;
 	        return client.getData(endpointName);
 	    },
-	    .then((viewModule) =>  {
+	    (viewModule) =>  {
 	        view = viewModule.default;
 	        return null;
 	    }
