@@ -9,7 +9,7 @@ class Router {
                 case 'catalog':
                     viewName = 'categoryProductsPage';
                     endpointName = 'products';
-                    switch(hash.split('/')[0]){
+                    switch(hash.split('/')[1]){
                         case 'pizza':
                             filterName = '1';
                             break;
