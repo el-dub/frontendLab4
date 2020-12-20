@@ -19,9 +19,6 @@ const view = (products, productUrl) => `
     					<span>${product.weight}</span>
     					<span>г</span>
     				</div>
-    				<h2 class="mb-2">
-    					Ингридиенты:
-    				</h2>
     				<div class="mb-2">
     					${product.productDescription}
     				</div>

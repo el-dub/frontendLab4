@@ -89,7 +89,8 @@ a:hover {
 .card{
 	padding: 5px;
 	transition: all .3s ease;
-    border-radius: 15px
+    border-radius: 15px;
+    height: 386px;
 }
 .card:hover{
 	box-shadow: 0 0 15px rgba(0,0,0,.5);
@@ -320,7 +321,7 @@ img {
 }
 @media (max-width: 991px){
 	.container{
-		max-width: 991pxpx;
+		max-width: 991px;
 	}
 
 }
@@ -339,6 +340,9 @@ img {
 		max-width: 575px;
 		min-width: 300px;
 	}
+    h1{
+        font-size: 16px;
+    }
     form{
         width: auto;
         margin-left: 10px;
