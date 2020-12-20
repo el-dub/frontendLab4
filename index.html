@@ -13,7 +13,7 @@
     <header>
     	<div class="navbar navbar-expand-lg fixed-top navbar-dark bg-dark">
 	      <div class="container">
-	      	<a href="https://dominos.ua/ru/kyiv/" class="navbar-brand">
+	      	<a href="#catalog" class="navbar-brand">
 	      		<svg width="204" height="32" viewBox="0 0 204 32" fill="none" xmlns="http://www.w3.org/2000/svg">
 	      			<path d="M30.0664 8.98327L21.7563 0.561624C21.5837 0.383767 21.3779 0.242508 21.1509 0.146084C20.9239 0.0496598 20.6803 -1.73708e-10 20.4341 -1.73709e-10C20.188 -1.73708e-10 19.9443 0.0496598 19.7173 0.146084C19.4903 0.242508 19.2845 0.383767 19.1119 0.561624L12.1571 7.62656L0.551384 19.3847C0.376685 19.5601 0.238009 19.7688 0.143368 19.9988C0.0487281 20.2288 1.36892e-10 20.4755 1.36891e-10 20.7247C1.36892e-10 20.9738 0.0487281 21.2206 0.143368 21.4506C0.238009 21.6806 0.376685 21.8893 0.551384 22.0646L8.86478 30.4729C9.03736 30.6507 9.24315 30.792 9.47016 30.8884C9.69717 30.9848 9.94085 31.0345 10.187 31.0345C10.4331 31.0345 10.6768 30.9848 10.9038 30.8884C11.1308 30.792 11.3366 30.6507 11.5092 30.4729L21.8952 19.9307L30.0664 11.6464C30.2394 11.4718 30.3767 11.2643 30.4704 11.0358C30.564 10.8073 30.6122 10.5623 30.6122 10.3149C30.6122 10.0674 30.564 9.8224 30.4704 9.5939C30.3767 9.36539 30.2394 9.15788 30.0664 8.98327Z" fill="white"></path>
 	      			<path d="M29.4814 9.58277L21.1647 1.15777C20.972 0.963234 20.7111 0.854004 20.4391 0.854004C20.1671 0.854004 19.9062 0.963234 19.7136 1.15777L10.7225 10.2695L20.5036 20.1617L29.4814 11.0634C29.5779 10.9665 29.6546 10.8512 29.7069 10.7242C29.7592 10.5971 29.7861 10.4608 29.7861 10.3231C29.7861 10.1854 29.7592 10.0491 29.7069 9.92202C29.6546 9.79494 29.5779 9.67964 29.4814 9.58277ZM22.1563 12.0181C21.7625 12.4181 21.2439 12.6673 20.689 12.7232C20.1341 12.7791 19.5773 12.6382 19.1135 12.3246C18.6496 12.011 18.3074 11.5441 18.1452 11.0035C17.983 10.4628 18.0108 9.88192 18.2239 9.35973C18.437 8.83754 18.8222 8.40641 19.3139 8.13983C19.8055 7.87324 20.3732 7.7877 20.9201 7.89778C21.467 8.00786 21.9594 8.30676 22.3132 8.74351C22.667 9.18027 22.8604 9.72786 22.8604 10.2929C22.8613 10.6134 22.7996 10.9308 22.6787 11.2269C22.5579 11.5231 22.3803 11.792 22.1563 12.0181Z" fill="#E31837"></path>
@@ -159,13 +159,13 @@
 				                    <label for="exampleInputEmail1">Контакты</label>
 				                    <div class="row">
 				                    	<div class="input col-4">
-				                    		<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Имя">
+				                    		<input type="text" class="form-control" id="inputName" placeholder="Имя">
 				                    	</div>
 				                    	<div class="input col-4">
-				                    		<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Телефон">
+				                    		<input type="tel" class="form-control" id="inputPhone" placeholder="Телефон">
 				                    	</div>
 				                    	<div class="input col-4">
-				                    		<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+				                    		<input type="email" class="form-control" id="inputEmail" placeholder="Email">
 				                    	</div>
 				                    		
 				                    </div>
@@ -174,7 +174,7 @@
 				                    <label for="exampleInputEmail1">Адрес</label>
 				                    <div class="row">
 				                    	<div class="input col-8">
-				                    		<select class="form-control" id="exampleSelectCity">
+				                    		<select class="form-control" id="inputCity">
 						                      <option>Киев</option>
 						                      <option>Бровары</option>
 						                      <option>Вишневое</option>
@@ -184,28 +184,28 @@
 						                    </select>
 				                    	</div>		
 				                    	<div class="input col-4">
-				                    		<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Улица">
+				                    		<input type="text" class="form-control" id="inputStreet" placeholder="Улица">
 				                    	</div>
 				                    			                    		
 				                    </div>
 				                    <div class="row">
 				                    	<div class="input col-4">
-				                    		<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Дом">
+				                    		<input type="text" class="form-control" id="inputHouse" placeholder="Дом">
 				                    	</div>
 				                    	<div class="input col-4">
-				                    		<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Квартира">
+				                    		<input type="text" class="form-control" id="inputFlat" placeholder="Квартира">
 				                    	</div>
 				                    	<div class="input col-4">
-				                    		<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Подъезд">
+				                    		<input type="text" class="form-control" id="inputEntrance" placeholder="Подъезд">
 				                    	</div>
 				                    		
 				                    </div>
 				                    <div class="row">
 				                    	<div class="input col-4">
-				                    		<input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Код">
+				                    		<input type="text" class="form-control" id="inputCode" placeholder="Код">
 				                    	</div>
 				                    	<div class="input col-4">
-				                    		<input type="number" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Этаж">
+				                    		<input type="number" class="form-control" id="inputFloor" placeholder="Этаж">
 				                    	</div>
 				                    </div>
 				                  </div>
@@ -231,9 +231,13 @@
     	<div class="container">
     		<div class="row">
     			<div class="col-md-6 col-12">
+    				<div class="product-page-image mb-1 mt-1">
+						<img src="https://media.dominos.ua/menu/product_osg_image_category/2019/10/04/%D0%9A%D0%B0%D0%BD%D1%82%D1%80%D0%B8_300dpi-min.jpg" srcset="https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%9A%D0%B0%D0%BD%D1%82%D1%80%D0%B8_300dpi-min-thumbnail-960x960-70.jpg 480w, https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%9A%D0%B0%D0%BD%D1%82%D1%80%D0%B8_300dpi-min-thumbnail-960x960-70.jpg 960w, https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%9A%D0%B0%D0%BD%D1%82%D1%80%D0%B8_300dpi-min-thumbnail-960x960-70.jpg 1150w, https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%9A%D0%B0%D0%BD%D1%82%D1%80%D0%B8_300dpi-min-thumbnail-960x960-70.jpg 2300w" alt="Пицца Кантри - Domino's Pizza Киев" title="Пицца Кантри - заказать">
+					</div>
+    			</div>
+    			<div class="col-md-6 col-12">
     				<div class="product-image mb-1 mt-1">
 						<img src="https://media.dominos.ua/menu/product_osg_image_category/2019/10/04/%D0%9A%D0%B0%D0%BD%D1%82%D1%80%D0%B8_300dpi-min.jpg" srcset="https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%9A%D0%B0%D0%BD%D1%82%D1%80%D0%B8_300dpi-min-thumbnail-960x960-70.jpg 480w, https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%9A%D0%B0%D0%BD%D1%82%D1%80%D0%B8_300dpi-min-thumbnail-960x960-70.jpg 960w, https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%9A%D0%B0%D0%BD%D1%82%D1%80%D0%B8_300dpi-min-thumbnail-960x960-70.jpg 1150w, https://media.dominos.ua/__sized__/menu/product_osg_image_category/2019/10/04/%D0%9A%D0%B0%D0%BD%D1%82%D1%80%D0%B8_300dpi-min-thumbnail-960x960-70.jpg 2300w" alt="Пицца Кантри - Domino's Pizza Киев" title="Пицца Кантри - заказать">
-							  	<!-- <div class="dp-product-block__weight">380 г</div> -->
 					</div>
     			</div>
     		</div>
