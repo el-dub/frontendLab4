@@ -13,13 +13,9 @@ window.onhashchange = () => {
 	import(`./views/${viewName}.js`)
 	    .then((viewModule) =>  {
 	        view = viewModule.default;
-	        return client.getData(endpointName);
-	    },
-	    (viewModule) =>  {
-	        view = viewModule.default;
-	        return null;
-	    }
-	    )
+	        if(endpointName!=='') return client.getData(endpointName);
+	        else return null;
+	    })
 	    .then((data) => {
 	        templateProcessor.render(view(data, filterName));
 	    });
