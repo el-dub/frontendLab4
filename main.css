@@ -9,6 +9,9 @@ a {
     text-decoration: none!important;
     background-color: transparent!important;
 }
+a:hover {
+    color: black;
+}
 .navbar-dark .navbar-nav .nav-link {
     color: white;
     font-size: 18px;

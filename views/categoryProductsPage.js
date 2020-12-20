@@ -15,19 +15,6 @@ const view = (products, categoryId) => `
 								    <h5 class="card-title">${product.productName}</h5>
 								    <h6 class="card-subtitle text-muted">${product.productDescription}</h6>
 								  </div>
-								  <div class="bs-component">
-						              <div class="btn-group btn-group-toggle" data-toggle="buttons">
-						                <label class="btn btn-primary active">
-						                  <input type="radio" name="options" id="option1" autocomplete="off" checked=""> Маленькая
-						                </label>
-						                <label class="btn btn-primary">
-						                  <input type="radio" name="options" id="option2" autocomplete="off"> Средняя
-						                </label>
-						                <label class="btn btn-primary">
-						                  <input type="radio" name="options" id="option3" autocomplete="off"> Большая
-						                </label>
-						              </div>
-						          </div>
 						          <div class="row price-buy-row card-body">
 						          	<div class="price-buy col-6"> 
 						          		<span class="product-price">${product.price}</span>
