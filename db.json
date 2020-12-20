@@ -164,14 +164,17 @@
   }
   ],
   "productsCategories": [{
+    "id": 1,
     "url": "pizza",
     "name": "Пицца"
   },
   {
+    "id": 2,
     "url": "drinks",
     "name": "Напитки"
   },
   {
+    "id": 3,
     "url": "desserts",
     "name": "Дессерты"
   }
