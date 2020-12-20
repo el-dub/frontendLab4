@@ -13,10 +13,10 @@ window.onhashchange = () => {
 	import(`./views/${viewName}.js`)
 	    .then((viewModule) =>  {
 	        view = viewModule.default;
-	        return {client.getData(endpointName), client.getData(filterEndpointName)}
+	        return [{client].getData(endpointName), client.getData(filterEndpointName)}]
 	    })
-	    .then((data, filterData) => {
-	        templateProcessor.render(view(data, filterName, filterData));
+	    .then((data) => {
+	        templateProcessor.render(view(data[0], data[1], filterData));
 	    });
 };
 
