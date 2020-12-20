@@ -4,6 +4,11 @@ body {
     padding-top: 120px;
     letter-spacing: .05em;
 }
+a {
+    color: black;
+    text-decoration: none!important;
+    background-color: transparent!important;
+}
 .navbar-dark .navbar-nav .nav-link {
     color: white;
     font-size: 18px;
