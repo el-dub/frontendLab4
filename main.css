@@ -122,19 +122,19 @@ a {
     align-self: center;
 }
 .product-price{
-	font-size: 18px;
+	font-size: 20px;
     font-weight: 700;
     display: inline-block;
     letter-spacing: 0;
 }
 .product-currency{
-	font-size: 11px;
+	font-size: 14px;
     margin-left: 5px;
     font-weight: 700;
     letter-spacing: 0;
 }
 
-.price-buy-row .bs-component button{
+.btn-danger{
 	height: 50px;
     width: 100%;
     font-size: 18px;
@@ -158,7 +158,7 @@ a {
     background-clip: initial;
     background-color: rgb(227, 24, 55);
 }
-.price-buy-row .bs-component button:hover {
+.btn-danger:hover {
     background: #bf142e;
     background-image: initial;
     background-position-x: initial;
@@ -239,9 +239,66 @@ input, select{
     min-height: 360px;
     position: relative;
 }
-.product-name{
-    
+.product-row{
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
+h1{
+    font-family: Roboto,sans-serif;
+    font-weight: 700;
+    font-size: 3.35vw;
+    margin-bottom: 1.75vw;
+}
+h2{
+    font-family: Roboto,sans-serif;
+    font-weight: 700;
+    font-size: 2.35vw;
+    margin-bottom: 1.75vw;
+}
+.product-weight-title{
+    font-weight: bold;
+}
+.dp-product-block__quantity, .dp-product-block__quantity-control {
+    height: 50px;
+    border: 1px solid rgba(0,0,0,.08);
+    border-radius: 15px;
+    background: #f8f8f8;
+}
+.dp-product-block__quantity {
+    padding-right: 0;
+    padding-left: 0;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+.dp-product-block__quantity-control {
+    width: 50px;
+    padding: 0;
+    cursor: pointer;
+    -webkit-transition: border .3s ease;
+    -o-transition: border .3s ease;
+    transition: border .3s ease;
+}
+.dp-product-block__quantity-count {
+    height: 100%;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #4f4f4f;
+    font-size: 18px;
+    font-weight: 700;
+}
+.dp-product-block__quantity-control svg {
+    height: 14px;
+    width: 14px;
+}
+
 img {
 	width: 100%;
     height: 100%;
@@ -283,5 +340,8 @@ img {
         width: auto;
         margin-left: 10px;
         margin-right: 10px;
+    }
+    .product-row{
+        min-width: 300px;
     }
 }
