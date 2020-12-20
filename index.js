@@ -14,10 +14,18 @@ window.onhashchange = () => {
 	    .then((viewModule) =>  {
 	        view = viewModule.default;
 	        return [client.getData(endpointName), client.getData(filterEndpointName)]
+	    },
+	    (viewModule) =>  {
+	        view = viewModule.default;
+	        return client.getData(endpointName)
 	    })
 	    .then((data) => {
 	        templateProcessor.render(view(data[0], filterName, data[1]));
-	    });
+	    },
+	    (data) => {
+	        templateProcessor.render(view(data));
+	    }
+	    );
 };
 
 
