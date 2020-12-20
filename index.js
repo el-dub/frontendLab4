@@ -16,7 +16,7 @@ window.onhashchange = () => {
 	        return [client.getData(endpointName), client.getData(filterEndpointName)]
 	    })
 	    .then((data) => {
-	        templateProcessor.render(view(data[0], data[1], filterData));
+	        templateProcessor.render(view(data[0], data[1], filterName));
 	    });
 };
 
