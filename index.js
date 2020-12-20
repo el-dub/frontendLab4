@@ -8,24 +8,16 @@ const templateProcessor = new TemplateProcessor();
 const client = new Client();
 
 window.onhashchange = () => {
-    let { viewName, endpointName, filterName, filterEndpointName } = router.getCurrentState();
+    let { viewName, endpointName, filterName } = router.getCurrentState();
     let view;
 	import(`./views/${viewName}.js`)
 	    .then((viewModule) =>  {
 	        view = viewModule.default;
-	        return [client.getData(endpointName), client.getData(filterEndpointName)]
-	    },
-	    (viewModule) =>  {
-	        view = viewModule.default;
-	        return client.getData(endpointName)
+	        return client.getData(endpointName);
 	    })
 	    .then((data) => {
-	        templateProcessor.render(view(data[0], filterName, data[1]));
-	    },
-	    (data) => {
-	        templateProcessor.render(view(data));
-	    }
-	    );
+	        templateProcessor.render(view(data, filterName));
+	    });
 };
 
 

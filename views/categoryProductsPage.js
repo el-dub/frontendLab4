@@ -1,9 +1,9 @@
-const view = (products, categoryUrl, categories) => `
+const view = (products, categoryId) => `
 <main id="main">
     <div class="container">
     		<div class="products-section">
 	    		<div class="row">
-	    		${products.filter(product => product.category == categories.filter(category => category.url == categoryUrl)[0].id).map((product => `
+	    		${products.filter(product => product.category == categoryId).map((product => `
 		    		<div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12">
 		    			<div class="bs-component">
 		    				<a href="#product/${product.url}">
