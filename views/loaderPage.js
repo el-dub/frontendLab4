@@ -1,4 +1,4 @@
-const view = () => `
+export let view =`
 <main id="main">
 		<div class="container">
     		<div class="row spinner-row">
@@ -9,5 +9,3 @@ const view = () => `
     	</div>
 </main>
 `;
-
-export default view;
