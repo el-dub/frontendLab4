@@ -4,14 +4,13 @@ import Client from './client.js';
 import Router from './router.js';
 import Loader from './loader.js';
 
-
 const router = new Router();
 const templateProcessor = new TemplateProcessor();
 const client = new Client();
 const loader = new Loader();
 
 window.onhashchange = () => {
-    let { viewName, endpointName, filterName } = router.getCurrentState();
+    let { viewName, endpointName, filterId, filterName } = router.getCurrentState();
     let view;
     loader.showLoader();
 	import(`./views/${viewName}.js`)
@@ -21,7 +20,7 @@ window.onhashchange = () => {
 	        else return null;
 	    })
 	    .then((data) => {
-	        templateProcessor.render(view(data, filterName));
+	        templateProcessor.render(view(data, filterId, filterName));
 	    });
 };
 

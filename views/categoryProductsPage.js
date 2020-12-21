@@ -1,8 +1,11 @@
-const view = (products, categoryId) => `
+const view = (products, categoryId, categoryName) => `
 <main id="main">
     <div class="container">
     		<div class="products-section">
 	    		<div class="row">
+	    		<div class="order-title text-center">
+    				${categoryName}
+    			</div>
 	    		${products.filter(product => product.categoryId === Number(categoryId)).map(product => `
 		    		<div class="col-xl-3 col-lg-4 col-sm-6 col-xs-12">
 		    			<div class="bs-component">

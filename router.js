@@ -2,6 +2,7 @@ class Router {
     getCurrentState() {
         let viewName = '';
         let endpointName = '';
+        let filterId = '';
         let filterName = '';
         let hash = window.location.hash.split('#')[1];
         if(hash.split('/')[1]){
@@ -11,12 +12,15 @@ class Router {
                     endpointName = 'products';
                     switch(hash.split('/')[1]){
                         case 'pizza':
+                            filterId = '1';
                             filterName = 'Пицца';
                             break;
                         case 'drinks':
+                            filterId = '2';
                             filterName = 'Напитки';
                             break;
                         case 'desserts':
+                            filterId = '3';
                             filterName = 'Дессерты';
                             break;
                         default:
@@ -62,6 +66,7 @@ class Router {
         return {
             viewName,
             endpointName,
+            filterId,
             filterName
         };
     }
