@@ -6,7 +6,7 @@ const templateProcessor = new TemplateProcessor();
 class Loader{
 	showLoader(){
 		let view = LoaderPage.default;
-		templateProcessor.render(view());
+		templateProcessor.render(view);
 	}
 }
 
