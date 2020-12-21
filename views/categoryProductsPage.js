@@ -3,7 +3,7 @@ const view = (products, categoryId, categoryName) => `
     <div class="container">
     		<div class="products-section">
 	    		<div class="row">
-	    		<div class="order-title text-center">
+	    		<div class="order-title text-center col-12">
     				${categoryName}
     			</div>
 	    		${products.filter(product => product.categoryId === Number(categoryId)).map(product => `
