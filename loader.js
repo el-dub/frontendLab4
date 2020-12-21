@@ -5,7 +5,10 @@ const templateProcessor = new TemplateProcessor();
 
 class Loader{
 	showLoader(){
-		let view = LoaderPage.default;
+		let view;
+		(LoaderPage) =>  {
+	        view = LoaderPage.default;
+	    }
 		templateProcessor.render(view);
 	}
 }
