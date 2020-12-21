@@ -11,13 +11,13 @@ class Router {
                     endpointName = 'products';
                     switch(hash.split('/')[1]){
                         case 'pizza':
-                            filterName = '1';
+                            filterName = 'Пицца';
                             break;
                         case 'drinks':
-                            filterName = '2';
+                            filterName = 'Напитки';
                             break;
                         case 'desserts':
-                            filterName = '3';
+                            filterName = 'Дессерты';
                             break;
                         default:
                             viewName = 'catalogPage';

@@ -1,7 +1,7 @@
 body {
 	font-family: Roboto Condensed,sans-serif;
     font-size: 15px;
-    padding-top: 120px;
+    /*padding-top: 120px;*/
     letter-spacing: .05em;
 }
 a {
@@ -11,6 +11,9 @@ a {
 }
 a:hover {
     color: black;
+}
+main{
+    margin-top: 66px;
 }
 .bg-dark {
     background-color: #000!important;
@@ -407,6 +410,18 @@ footer{
 .product-info-row div div{
     height: auto;
 
+}
+/*---------------------*/
+/*spinner*/
+.spinner-border{
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+.spinner-row{
+    display: flex;
+    align-items: center;
+    height: 90vh;
 }
 img {
 	width: 100%;
