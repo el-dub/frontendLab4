@@ -9,6 +9,21 @@ const templateProcessor = new TemplateProcessor();
 const client = new Client();
 const loader = new Loader();
 
+window.onload = () => {
+	let { viewName, endpointName, filterId, filterName } = router.getCurrentState();
+    let view;
+    loader.showLoader();
+    import(`./views/${viewName}.js`)
+	    .then((viewModule) =>  {
+	        view = viewModule.default;
+	        if(endpointName!=='') return client.getData(endpointName);
+	        else return null;
+	    })
+	    .then((data) => {
+	        templateProcessor.render(view(data, filterId, filterName));
+	    });
+}
+
 window.onhashchange = () => {
     let { viewName, endpointName, filterId, filterName } = router.getCurrentState();
     let view;
