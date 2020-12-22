@@ -1,10 +1,9 @@
 import {getProductsInCart} from "./cart.js";
-const view = (products) => {
-	let productsInCart = getProductsInCart(products);
-	if(!productsInCart){
-		return `
-			<main id="main">
-			    <div class="container">
+const productsInCart = getProductsInCart(products);
+const view = (products) => `
+${if(!productsInCart){
+	() => `<main id="main">
+				<div class="container">
 			    	<div class="form-section">
 			    		<div class="row">
 			    			<div class="order-title">
@@ -13,12 +12,11 @@ const view = (products) => {
 			    		</div>
 				    </div>
 			    </div>       	
-			</main>
-			`;
-	}
-	else{
-		return `
-		<main id="main">
+			</main>`;
+		}
+		else{
+			() => `
+			<main id="main">
 		    <div class="container">
 		    		<div class="form-section">
 		    			<div class="row">
@@ -69,10 +67,10 @@ const view = (products) => {
 						</div>
 			    	</div>
 		    	</div>       	
-		</main>
-		`;
+		</main>`;
+		}
 	}
-};
+`;
 
 
 
