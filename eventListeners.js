@@ -1,6 +1,6 @@
 import {addToCart, getProductsInCart, clearCart} from "./cart.js";
 
-export default function addEventListeners(viewName, products, filter){
+export function addEventListeners(viewName, products, filter){
 	switch(viewName){
 		case 'catalogPage':
 			addListenersForButtonsInCatalog(products);

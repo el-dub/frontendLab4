@@ -3,7 +3,7 @@ import TemplateProcessor from './templateProcessor.js';
 import Client from './client.js';
 import Router from './router.js';
 import Loader from './loader.js';
-import addEventListeners from './eventListeners.js';
+import {addEventListeners} from './eventListeners.js';
 
 const router = new Router();
 const templateProcessor = new TemplateProcessor();
