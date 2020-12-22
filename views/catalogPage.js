@@ -21,7 +21,7 @@ const view = (products) => `
 						          		<span class="product-currency">грн</span>
 						          	</div>
 						          	<div class="bs-component col-6">
-							          	<button type="button" class="btn btn-danger">В корзину</button>
+							          	<button id="btn_product_${product.id}" type="button" class="btn btn-danger">В корзину</button>
 							        </div>
 						          </div>
 						        

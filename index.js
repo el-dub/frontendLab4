@@ -3,6 +3,7 @@ import TemplateProcessor from './templateProcessor.js';
 import Client from './client.js';
 import Router from './router.js';
 import Loader from './loader.js';
+import addEventListeners from './eventListeners.js';
 
 const router = new Router();
 const templateProcessor = new TemplateProcessor();
@@ -21,6 +22,7 @@ window.onload = () => {
 	    })
 	    .then((data) => {
 	        templateProcessor.render(view(data, filterId, filterName));
+	        addEventListeners(viewName, data, filterId);
 	    });
 }
 
@@ -36,6 +38,7 @@ window.onhashchange = () => {
 	    })
 	    .then((data) => {
 	        templateProcessor.render(view(data, filterId, filterName));
+	        addEventListeners(viewName, data, filterId);
 	    });
 };
 
