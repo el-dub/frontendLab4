@@ -23,7 +23,7 @@ window.onload = () => {
 	    })
 	    .then((data) => {
 	        templateProcessor.render(view(data, filterId, filterName));
-	        eventsAddder.addEventListeners(viewName, data, filterId);
+	        //eventsAddder.addEventListeners(viewName, data, filterId);
 	    });
 }
 
@@ -39,7 +39,7 @@ window.onhashchange = () => {
 	    })
 	    .then((data) => {
 	        templateProcessor.render(view(data, filterId, filterName));
-	        eventsAddder.addEventListeners(viewName, data, filterId);
+	        //eventsAddder.addEventListeners(viewName, data, filterId);
 	    });
 };
 
