@@ -3,13 +3,13 @@ import TemplateProcessor from './templateProcessor.js';
 import Client from './client.js';
 import Router from './router.js';
 import Loader from './loader.js';
-import EventListenersAddder from './eventListeners.js';
+//import EventListenersAddder from './eventListeners.js';
 
 const router = new Router();
 const templateProcessor = new TemplateProcessor();
 const client = new Client();
 const loader = new Loader();
-const eventsAddder = new EventListenersAddder();
+//const eventsAddder = new EventListenersAddder();
 
 window.onload = () => {
 	let { viewName, endpointName, filterId, filterName } = router.getCurrentState();
