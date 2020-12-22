@@ -1,8 +1,6 @@
 import {getProductsInCart} from "./cart.js";
 const productsInCart = getProductsInCart(products);
-const view = (products) => `
-${if(!productsInCart){
-	() => `<main id="main">
+const view = (products) => ((!productsInCart) ? `<main id="main">
 				<div class="container">
 			    	<div class="form-section">
 			    		<div class="row">
@@ -12,10 +10,8 @@ ${if(!productsInCart){
 			    		</div>
 				    </div>
 			    </div>       	
-			</main>`;
-		}
-		else{
-			() => `
+			</main>` :
+			`
 			<main id="main">
 		    <div class="container">
 		    		<div class="form-section">
@@ -67,11 +63,8 @@ ${if(!productsInCart){
 						</div>
 			    	</div>
 		    	</div>       	
-		</main>`;
-		}
-	}
-`;
-
+		</main>
+		`);
 
 
 export default view;
