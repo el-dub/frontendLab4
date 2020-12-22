@@ -3,12 +3,13 @@ import TemplateProcessor from './templateProcessor.js';
 import Client from './client.js';
 import Router from './router.js';
 import Loader from './loader.js';
-import {addEventListeners} from './eventListeners.js';
+import EventListenersAddder from './eventListeners.js';
 
 const router = new Router();
 const templateProcessor = new TemplateProcessor();
 const client = new Client();
 const loader = new Loader();
+const eventsAddder = new EventListenersAddder();
 
 window.onload = () => {
 	let { viewName, endpointName, filterId, filterName } = router.getCurrentState();
@@ -22,7 +23,7 @@ window.onload = () => {
 	    })
 	    .then((data) => {
 	        templateProcessor.render(view(data, filterId, filterName));
-	        addEventListeners(viewName, data, filterId);
+	        eventsAddder.addEventListeners(viewName, data, filterId);
 	    });
 }
 
@@ -38,7 +39,7 @@ window.onhashchange = () => {
 	    })
 	    .then((data) => {
 	        templateProcessor.render(view(data, filterId, filterName));
-	        addEventListeners(viewName, data, filterId);
+	        eventsAddder.addEventListeners(viewName, data, filterId);
 	    });
 };
 
