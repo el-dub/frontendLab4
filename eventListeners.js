@@ -1,4 +1,4 @@
-import {addToCart, getProductsInCart, clearCart} from "./cart.js";
+import {addToCart, getProductsInCart, clearCart} from './cart.js';
 
 export function addEventListeners(viewName, products, filter){
 	switch(viewName){
@@ -50,5 +50,4 @@ function addListenersForProductPage(products, productUrl){
 function addListenersForCartPage(){
 
 }
-
 
