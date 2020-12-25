@@ -26,7 +26,7 @@ const view = (productsInCart) => ((!productsInCart) ? `<main id="main">
 				    			<div class="cart-page">
 				    			${productsInCart.map(product => `
 				    				<div class="row cart-product-row">
-				    					<div id="remove_bt_${product.id}" class="removeBt"><img src=${product.image}></div>
+				    					<div id="remove_bt_${product.id}" class="removeBt"><img src="https://img.icons8.com/material/24/000000/delete-sign--v1.png"></div>
 				    					<div class="row product-info-row col-11">
 				    						<div class="col-6">
 				    							<div>${product.productName}</div>

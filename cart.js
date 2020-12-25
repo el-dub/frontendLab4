@@ -2,14 +2,12 @@ export function addToCart(productId, quantity){
     const cart = (localStorage.getItem('cart')) ? JSON.parse(window.localStorage.getItem('cart')) : {};
     cart[productId] = quantity;
     window.localStorage.setItem('cart', JSON.stringify(cart));
-    return sum = () => {
-        let sum = 0;
-        let values = Object.values(localStorage);
-        for(let value of values){
-            sum+=value;
-        }
-        return sum;
+    let sum = 0;
+    let values = Object.values(localStorage);
+    for(let value of values){
+        sum+=value;
     }
+    return sum;
 }
 export function getProductsInCart(products){
     const cart = (localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')) : {};
