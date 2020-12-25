@@ -22,12 +22,9 @@ window.onload = () => {
 	        else return null;
 	    })
 	    .then((data) => {
-	        if(viewName==='cartPage') templateProcessor.render(view(getProductsInCart(data), filterId, filterName));
-	    	else templateProcessor.render(view(data, filterId, filterName));
-	        
-	    })
-	    .then({
-	    	eventsAddder.addEventListeners(viewName, data, filterId);
+	        if(viewName==='cartPage') data = getProductsInCart(data);
+	        templateProcessor.render(view(data, filterId, filterName));
+	        eventsAddder.addEventListeners(viewName, data, filterId);
 	    });
 }
 
@@ -42,13 +39,9 @@ window.onhashchange = () => {
 	        else return null;
 	    })
 	    .then((data) => {
-	    	if(viewName==='cartPage') templateProcessor.render(view(getProductsInCart(data), filterId, filterName));
-	    	else templateProcessor.render(view(data, filterId, filterName));
-	        return data;
-	        //eventsAddder.addEventListeners(viewName, data, filterId);
-	    })
-	    .then((data) => {
-	    	eventsAddder.addEventListeners(viewName, data, filterId);
+	    	if(viewName==='cartPage') data = getProductsInCart(data);
+	        templateProcessor.render(view(data, filterId, filterName));
+	        eventsAddder.addEventListeners(viewName, data, filterId);
 	    });
 };
 
