@@ -31,21 +31,19 @@ class EventListenersAddder {
 			};
 		};
 
-		addEventListeners(viewName, products, filter){
-			switch(viewName){
-				case 'catalogPage':
-					addListenersForButtonsInCatalog(products);
-					break;
-				case 'categoryProductsPage':
-					addListenersForButtonsInCatalog(products, filter);
-					break;
-				case 'productPage':
-					addListenersForProductPage(products, filter);
-					break;
-				case 'cartPage':
-					addListenersForCartPage();
-					break;
-			}
+		switch(viewName){
+			case 'catalogPage':
+				addListenersForButtonsInCatalog(products);
+				break;
+			case 'categoryProductsPage':
+				addListenersForButtonsInCatalog(products, filter);
+				break;
+			case 'productPage':
+				addListenersForProductPage(products, filter);
+				break;
+			case 'cartPage':
+				addListenersForCartPage();
+				break;
 		}
 	}
 }
