@@ -4,13 +4,13 @@ import Client from './client.js';
 import Router from './router.js';
 import Loader from './loader.js';
 import {getProductsInCart} from './cart.js';
-//import EventListenersAddder from './eventListeners.js';
+import EventListenersAddder from './eventListeners.js';
 
 const router = new Router();
 const templateProcessor = new TemplateProcessor();
 const client = new Client();
 const loader = new Loader();
-//const eventsAddder = new EventListenersAddder();
+const eventsAddder = new EventListenersAddder();
 
 window.onload = () => {
 	let { viewName, endpointName, filterId, filterName } = router.getCurrentState();
@@ -23,8 +23,12 @@ window.onload = () => {
 	        else return null;
 	    })
 	    .then((data) => {
-	        templateProcessor.render(view(data, filterId, filterName));
-	        //eventsAddder.addEventListeners(viewName, data, filterId);
+	        if(viewName==='cartPage') templateProcessor.render(view(getProductsInCart(data), filterId, filterName));
+	    	else templateProcessor.render(view(data, filterId, filterName));
+	        
+	    })
+	    .then({
+	    	eventsAddder.addEventListeners(viewName, data, filterId);
 	    });
 }
 
@@ -41,8 +45,11 @@ window.onhashchange = () => {
 	    .then((data) => {
 	    	if(viewName==='cartPage') templateProcessor.render(view(getProductsInCart(data), filterId, filterName));
 	    	else templateProcessor.render(view(data, filterId, filterName));
-	        
+	        return data;
 	        //eventsAddder.addEventListeners(viewName, data, filterId);
+	    })
+	    .then((data) => {
+	    	eventsAddder.addEventListeners(viewName, data, filterId);
 	    });
 };
 
