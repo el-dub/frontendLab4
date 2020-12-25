@@ -20,11 +20,11 @@ class EventListenersAddder {
 			let quantity = document.getElementById('product_quantity');
 			let productBt = document.getElementById('btn_product_'+product.id);
 			plusBt.onclick = () =>{
-				quantity.innerHTML = (Number)quantity.innerHTML + 1;
+				quantity.innerHTML = String((Number)(quantity.innerHTML) + 1);
 			};
 			minusBt.onclick = () =>{
 				if((Number)quantity.innerHTML>=2)
-					quantity.innerHTML = (Number)quantity.innerHTML - 1;
+					quantity.innerHTML = String((Number)quantity.innerHTML - 1);
 			};
 			productBt.onclick = () =>{
 				cartSum.innerHTML = addToCart(product.id, (Number)quantity.innerHTML);
