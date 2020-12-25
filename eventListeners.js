@@ -19,6 +19,7 @@ class EventListenersAddder {
 			let minusBt = document.getElementById('minus_product');
 			let quantity = document.getElementById('product_quantity');
 			let productBt = document.getElementById('btn_product_'+product.id);
+			let cartSum = document.getElementById('cart_products_quantity');
 			plusBt.onclick = () =>{
 				quantity.innerHTML = String((Number)(quantity.innerHTML) + 1);
 			};
@@ -42,7 +43,7 @@ class EventListenersAddder {
 				addListenersForProductPage(products, filter);
 				break;
 			case 'cartPage':
-				addListenersForCartPage();
+				//addListenersForCartPage();
 				break;
 		}
 	}
