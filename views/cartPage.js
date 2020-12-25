@@ -1,6 +1,6 @@
-import {getProductsInCart} from "../cart.js";
-const productsInCart = getProductsInCart(products);
-const view = (products) => ((!productsInCart) ? `<main id="main">
+//import {getProductsInCart} from "../cart.js";
+//const productsInCart = getProductsInCart(products);
+const view = (productsInCart) => ((!productsInCart) ? `<main id="main">
 				<div class="container">
 			    	<div class="form-section">
 			    		<div class="row">

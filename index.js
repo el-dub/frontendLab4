@@ -3,6 +3,7 @@ import TemplateProcessor from './templateProcessor.js';
 import Client from './client.js';
 import Router from './router.js';
 import Loader from './loader.js';
+import {getProductsInCart} from './cart.js';
 //import EventListenersAddder from './eventListeners.js';
 
 const router = new Router();
@@ -38,7 +39,9 @@ window.onhashchange = () => {
 	        else return null;
 	    })
 	    .then((data) => {
-	        templateProcessor.render(view(data, filterId, filterName));
+	    	if(viewName==='cartPage') templateProcessor.render(view(getProductsInCart(data), filterId, filterName));
+	    	else templateProcessor.render(view(data, filterId, filterName));
+	        
 	        //eventsAddder.addEventListeners(viewName, data, filterId);
 	    });
 };
