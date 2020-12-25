@@ -37,7 +37,7 @@ class EventListenersAddder {
 			products.forEach((product) => {
 				let removeBt = document.getElementById('remove_bt_'+product.id);
 				removeBt.onclick = () =>{
-					this.parentElement.remove();
+					removeBt.parentElement.remove();
 				};
 			});
 			let orderBt = document.getElementById('btn_order');

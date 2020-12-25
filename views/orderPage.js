@@ -1,4 +1,6 @@
-const view = () => `
+import {getSum} from "../cart.js";
+
+const view = (productsInCart) => `
 <main id="main">
     <div class="container">
     		<div class="form-section">
@@ -110,7 +112,7 @@ const view = () => `
 				                  </div>
 				                  <div class="row price-buy-row justify-content-center mb-3">
 					                	<div class="price-buy col-6 text-center"> 
-							          		<span class="product-price">170.99</span>
+							          		<span class="product-price">${getSum(productsInCart)}(</span>
 							          		<span class="product-currency">грн</span>
 							          	</div>
 					              </div>

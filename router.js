@@ -51,6 +51,7 @@ class Router {
                         break;
                     case 'order':
                         viewName = 'orderPage';
+                        endpointName = 'products';
                         break;
                     case 'cart':
                         viewName = 'cartPage';
