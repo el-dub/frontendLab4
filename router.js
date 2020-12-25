@@ -63,8 +63,8 @@ class Router {
             }
         }
         else{
-            let viewName = 'mainPage';
-            let products = '';
+            viewName = 'mainPage';
+            endpointName = 'products';
         }
         return {
             viewName,
