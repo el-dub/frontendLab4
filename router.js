@@ -1,68 +1,67 @@
 class Router {
     getCurrentState() {
-        let viewName = '';
+        let viewName = 'mainPage';
         let endpointName = '';
         let filterId = '';
         let filterName = '';
-        let hash = window.location.hash.split('#')[1];
-        if(hash.split('/')[1]){
-            switch (hash.split('/')[0]) {
-                case 'catalog':
-                    viewName = 'categoryProductsPage';
-                    endpointName = 'products';
-                    switch(hash.split('/')[1]){
-                        case 'pizza':
-                            filterId = '1';
-                            filterName = 'Пицца';
-                            break;
-                        case 'drinks':
-                            filterId = '2';
-                            filterName = 'Напитки';
-                            break;
-                        case 'desserts':
-                            filterId = '3';
-                            filterName = 'Дессерты';
-                            break;
-                        default:
-                            viewName = 'catalogPage';
-                    }
-                    break;
-                case 'product':
-                    viewName = 'productPage';
-                    endpointName = 'products';
-                    filterId = hash.split('/')[1];
-                    break;
-                case 'action':
-                    viewName = 'actionPage';
-                    endpointName = 'actions';
-                    filterId = hash.split('/')[1];
-                    break;
-                default:
-                    viewName = 'mainPage';
-                    break;
+        if(window.location.hash.split('#').length>1){
+            let hash = window.location.hash.split('#')[1];
+            if(window.location.hash.split('/').length>1){
+                switch (hash.split('/')[0]) {
+                    case 'catalog':
+                        viewName = 'categoryProductsPage';
+                        endpointName = 'products';
+                        switch(hash.split('/')[1]){
+                            case 'pizza':
+                                filterId = '1';
+                                filterName = 'Пицца';
+                                break;
+                            case 'drinks':
+                                filterId = '2';
+                                filterName = 'Напитки';
+                                break;
+                            case 'desserts':
+                                filterId = '3';
+                                filterName = 'Дессерты';
+                                break;
+                            default:
+                                viewName = 'catalogPage';
+                        }
+                        break;
+                    case 'product':
+                        viewName = 'productPage';
+                        endpointName = 'products';
+                        filterId = hash.split('/')[1];
+                        break;
+                    case 'action':
+                        viewName = 'actionPage';
+                        endpointName = 'actions';
+                        filterId = hash.split('/')[1];
+                        break;
+                    default:
+                        viewName = 'mainPage';
+                        break;
+                }
+            }
+            else{
+                switch (hash) {
+                    case 'catalog':
+                        viewName = 'catalogPage';
+                        endpointName = 'products';
+                        break;
+                    case 'order':
+                        viewName = 'orderPage';
+                        break;
+                    case 'cart':
+                        viewName = 'cartPage';
+                        endpointName = 'products';
+                        break;
+                    default:
+                        viewName = 'mainPage';
+                        break;
+                }
             }
         }
-        else{
-            switch (hash) {
-                case 'catalog':
-                    viewName = 'catalogPage';
-                    endpointName = 'products';
-                    break;
-                case 'order':
-                    viewName = 'orderPage';
-                    break;
-                case 'cart':
-                    viewName = 'cartPage';
-                    endpointName = 'products';
-                    break;
-                default:
-                    viewName = 'mainPage';
-                    break;
-            }
-        }
-
-        
-
         return {
             viewName,
             endpointName,
