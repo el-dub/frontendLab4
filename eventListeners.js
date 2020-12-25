@@ -24,10 +24,10 @@ class EventListenersAddder {
 			};
 			minusBt.onclick = () =>{
 				if((Number)quantity.innerHTML>=2)
-					quantity.innerHTML = String((Number)quantity.innerHTML - 1);
+					quantity.innerHTML = String((Number)(quantity.innerHTML) - 1);
 			};
 			productBt.onclick = () =>{
-				cartSum.innerHTML = addToCart(product.id, (Number)quantity.innerHTML);
+				cartSum.innerHTML = addToCart(product.id, (Number)(quantity.innerHTML));
 			};
 		};
 
