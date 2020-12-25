@@ -49,7 +49,7 @@ const view = (productsInCart) => ((!productsInCart) ? `<main id="main">
 				    	</div>
 				    	<div class="row mt-3">
 		    				<div class="order-title">
-		    					<span>Всего: </span><span>${Math.round(getSum(productsInCart)}</span><span> грн</span>
+		    					<span>Всего: </span><span>${Math.round(getSum(productsInCart))}</span><span> грн</span>
 		    				</div>
 		    			</div>
 		    			<div class="row price-buy-row justify-content-center">
