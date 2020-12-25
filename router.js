@@ -1,6 +1,6 @@
 class Router {
     getCurrentState() {
-        let viewName = 'mainPage';
+        let viewName = '';
         let endpointName = '';
         let filterId = '';
         let filterName = '';
@@ -61,6 +61,10 @@ class Router {
                         break;
                 }
             }
+        }
+        else{
+            let viewName = 'mainPage';
+            let products = '';
         }
         return {
             viewName,

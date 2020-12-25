@@ -4,9 +4,11 @@ export function addToCart(productId, quantity){
     window.localStorage.setItem('cart', JSON.stringify(cart));
     return sum = () => {
         let sum = 0;
-        for(key : cart){
-            sum+=cart[key];
+        let values = Object.values(localStorage);
+        for(let value of values){
+            sum+=value;
         }
+        return sum;
     }
 }
 export function getProductsInCart(products){
