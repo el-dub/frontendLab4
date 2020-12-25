@@ -23,3 +23,8 @@ export function getProductsInCart(products){
 export function clearCart(){
     localStorage.clear();
 }
+ export function getSum(productsInCart){
+    let sum = 0;
+    productsInCart.forEach((product) => sum+=(product.quantity*product.price));
+    return sum;
+ }

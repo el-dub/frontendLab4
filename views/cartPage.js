@@ -1,4 +1,4 @@
-//import {getProductsInCart} from "../cart.js";
+import {getSum} from "../cart.js";
 //const productsInCart = getProductsInCart(products);
 const view = (productsInCart) => ((!productsInCart) ? `<main id="main">
 				<div class="container">
@@ -38,7 +38,7 @@ const view = (productsInCart) => ((!productsInCart) ? `<main id="main">
 				    						</div>
 				    						<div class="col-4 cart-page-price">
 				    							<div>
-				    								<span>${product.price}</span><span> грн</span>
+				    								<span>${product.quantity*product.price}</span><span> грн</span>
 				    							</div>
 				    						</div>
 				    					</div>
@@ -49,11 +49,7 @@ const view = (productsInCart) => ((!productsInCart) ? `<main id="main">
 				    	</div>
 				    	<div class="row mt-3">
 		    				<div class="order-title">
-		    					<span>Всего: </span><span>${() => {
-		    						let sum = 0;
-		    						productsInCart.forEach((product) => sum+=(product.quantity*product.price));
-		    						return sum;
-		    					}}</span><span> грн</span>
+		    					<span>Всего: </span><span>${getSum(productsInCart)}</span><span> грн</span>
 		    				</div>
 		    			</div>
 		    			<div class="row price-buy-row justify-content-center">
