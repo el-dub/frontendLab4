@@ -22,7 +22,7 @@ window.onload = () => {
 	        else return null;
 	    })
 	    .then((data) => {
-	        if(viewName==='cartPage') data = getProductsInCart(data);
+	        if(viewName==='cartPage'||viewName==='orderPage') data = getProductsInCart(data);
 	        templateProcessor.render(view(data, filterId, filterName));
 	        eventsAddder.addEventListeners(viewName, data, filterId);
 	    });
@@ -39,7 +39,7 @@ window.onhashchange = () => {
 	        else return null;
 	    })
 	    .then((data) => {
-	    	if(viewName==='cartPage') data = getProductsInCart(data);
+	    	if(viewName==='cartPage'||viewName==='orderPage') data = getProductsInCart(data);
 	        templateProcessor.render(view(data, filterId, filterName));
 	        eventsAddder.addEventListeners(viewName, data, filterId);
 	    });
