@@ -15,9 +15,9 @@ export function getProductsInCart(products){
     const cart = (localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')) : {};
     if(Object.keys(cart).length!==0) {
         let productsInCart = products.filter(product => String(product.id) in cart);
-        productsInCart.foreach(product => {
+        for(let product of productsInCart){
             product.quantity = cart[product.id];
-        });
+        }
         return productsInCart;
     }
     else return null;
