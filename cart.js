@@ -13,7 +13,9 @@ export function addToCart(productId, quantity){
 }
 export function getProductsInCart(products){
     const cart = (localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')) : {};
-    if(Object.keys(cart).length!==0) return products.filter(product => String(product.id) in cart).foreach(product => product.quantity = cart[product.id]);
+    if(Object.keys(cart).length!==0) return products.filter(product => String(product.id) in cart).foreach(product => {
+        product.quantity = cart[product.id]
+    });
     else return null;
 }
 export function clearCart(){
