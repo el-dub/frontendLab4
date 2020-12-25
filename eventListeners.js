@@ -8,8 +8,9 @@ class EventListenersAddder {
 			let cartSum = document.getElementById('cart_products_quantity');
 			products.forEach((product) => {
 				let productBt = document.getElementById('btn_product_'+product.id);
-				productBt.onclick = () =>{
+				productBt.onclick = (event) =>{
 					cartSum.innerHTML = addToCart(product.id, 1);
+					event.stopPropagation();
 				};
 			});
     	};
@@ -31,6 +32,20 @@ class EventListenersAddder {
 				cartSum.innerHTML = addToCart(product.id, (Number)(quantity.innerHTML));
 			};
 		};
+		
+		const addListenersForCartPage = (products) => {
+			products.forEach((product) => {
+				let removeBt = document.getElementById('remove_bt_'+product.id);
+				removeBt.onclick = () =>{
+					this.parentElement.remove();
+				};
+			});
+			let orderBt = document.getElementById('btn_order');
+			orderBt.onclick = () => {
+				window.location.hash = 'order';
+			};
+
+		}
 
 		switch(viewName){
 			case 'catalogPage':
@@ -43,7 +58,7 @@ class EventListenersAddder {
 				addListenersForProductPage(products, filter);
 				break;
 			case 'cartPage':
-				//addListenersForCartPage();
+				addListenersForCartPage(products);
 				break;
 		}
 	}

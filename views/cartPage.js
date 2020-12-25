@@ -54,7 +54,7 @@ const view = (productsInCart) => ((!productsInCart) ? `<main id="main">
 		    			</div>
 		    			<div class="row price-buy-row justify-content-center">
 							<div class="bs-component col-12 col-sm-6 col-md-3">
-							    <button type="submit" class="btn btn-danger">Оформить</button>
+							    <button id="btn_order" type="submit" class="btn btn-danger">Оформить</button>
 							</div>
 						</div>
 			    	</div>
