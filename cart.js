@@ -3,7 +3,7 @@ export function addToCart(productId, quantity){
     cart[productId] = quantity;
     window.localStorage.setItem('cart', JSON.stringify(cart));
     let sum = 0;
-    let values = Object.values(localStorage);
+    let values = Object.values(cart);
     for(let value of values){
         sum+=value;
     }
