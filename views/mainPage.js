@@ -3,7 +3,7 @@ const view = (products) => `
     <div class="container">
     	<div class="products-section">
 	    	<div class="row">
-	    		<div class="order-title text-center">
+	    		<div class="order-title text-center col-12">
     				Наши хиты
     			</div>
     			${products.filter(product => product.id <= 4).map(product => `

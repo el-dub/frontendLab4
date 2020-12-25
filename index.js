@@ -1,4 +1,3 @@
-'use strict';
 import TemplateProcessor from './templateProcessor.js';
 import Client from './client.js';
 import Router from './router.js';
@@ -52,6 +51,7 @@ window.onhashchange = () => {
 	    	eventsAddder.addEventListeners(viewName, data, filterId);
 	    });
 };
+
 
 
 
