@@ -62,7 +62,6 @@ class EventListenersAddder {
 			btnOrder.onclick = () => {
 				const client = new Client();
 				const loader = new Loader();
-				loader.showLoader();
 				let data = {
 					name: document.getElementById('inputName'),
 					phone: document.getElementById('inputPhone'),
@@ -76,6 +75,7 @@ class EventListenersAddder {
 					time: document.getElementById('inputTime'),
 					cost: getSum(getProductsInCart(products)).toFixed(2)
 				};
+				loader.showLoader();
 				const templateProcessor = new TemplateProcessor();
 				client.postOrder('orders', data)
 					.then(order => {
@@ -87,7 +87,8 @@ class EventListenersAddder {
 			        	templateProcessor.render(errorView(error));
 			        });
 			    clearCart();
-			    
+			    let cartSum = document.getElementById('cart_products_quantity');
+				cartSum.innerHTML = getCart();
 			};
 
 			
