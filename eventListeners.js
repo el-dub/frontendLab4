@@ -1,4 +1,8 @@
 import {addToCart, getProductsInCart, clearCart, getSum, removeFromCart} from './cart.js';
+import Client from './client.js';
+import Loader from './loader.js';
+import TemplateProcessor from './templateProcessor.js';
+import view from './views/errorPage.js';
 
 class EventListenersAddder {
     addEventListeners(viewName, products, filter){
@@ -52,19 +56,54 @@ class EventListenersAddder {
 			}
 			
 		}
+		const addListenersForOrderPage = (products) => {
+			let btnOrder = document.getElementById('btn_form_order');
+			btnOrder.onclick = () => {
+				const client = new Client();
+				const loader = new Loader();
+				loader.showLoader();
+				let data = {
+					name: document.getElementById('inputName'),
+					phone: document.getElementById('inputPhone'),
+					email: document.getElementById('inputEmail'),
+					city: document.getElementById('inputCity'),
+					street: document.getElementById('inputStreet'),
+					house: document.getElementById('inputHouse'),
+					flat: document.getElementById('inputFlat'),
+					entrance: document.getElementById('inputEntrance'),
+					date: document.getElementById('inputDate'),
+					time: document.getElementById('inputTime'),
+					cost: getSum(getProductsInCart(products)).toFixed(2)
+				};
+				client.postOrder('orders', data)
+					.then(order => {
+						window.location.hash=`order/${order['id']}`;
+			           
+			        }).catch(error => {
+			        	const templateProcessor = new TemplateProcessor();
+			        	templateProcessor.render(view(error));
+			        });
+			    clearCart();
+			};
+
+			
+		}
 
 		switch(viewName){
 			case 'catalogPage':
 				//addListenersForButtonsInCatalog(products);
 				break;
 			case 'categoryProductsPage':
-				addListenersForButtonsInCatalog(products, filter);
+				//addListenersForButtonsInCatalog(products, filter);
 				break;
 			case 'productPage':
 				addListenersForProductPage(products, filter);
 				break;
 			case 'cartPage':
 				addListenersForCartPage(products);
+				break;
+			case 'orderPage':
+				addListenersForOrderPage(products);
 				break;
 		}
 	}

@@ -54,14 +54,6 @@ const view = (productsInCart) => `
 				                    	</div>
 				                    		
 				                    </div>
-				                    <div class="row">
-				                    	<div class="input col-4">
-				                    		<input type="text" class="form-control" id="inputCode" placeholder="Код">
-				                    	</div>
-				                    	<div class="input col-4">
-				                    		<input type="number" class="form-control" id="inputFloor" placeholder="Этаж">
-				                    	</div>
-				                    </div>
 				                  </div>
 				                   <div class="form-group">
 				                    <label for="exampleInputEmail1">Способ оплаты</label>
@@ -118,7 +110,7 @@ const view = (productsInCart) => `
 					              </div>
 					              <div class="row price-buy-row justify-content-center">
 					              	<div class="bs-component col-3">
-					              		<button type="submit" class="btn btn-danger">Заказать</button>
+					              		<button id="btn_form_order" type="submit" class="btn btn-danger">Заказать</button>
 					              	</div>
 					              </div>
 				                  
