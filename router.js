@@ -66,13 +66,14 @@ class Router {
                         endpointName = 'products';
                         break;
                     default:
-                        viewName = 'mainPage';
+                        viewName = 'catalogPage';
+                        endpointName = 'products';
                         break;
                 }
             }
         }
         else{
-            viewName = 'mainPage';
+            viewName = 'catalogPage';
             endpointName = 'products';
         }
         return {
