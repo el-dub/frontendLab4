@@ -1,6 +1,6 @@
 const view = (actions, actionUrl) => `
 <main id="main">
-	${products.filter(action => action.url === actionUrl).map((action => `
+	${actions.filter(action => action.url === actionUrl).map((action => `
 		<div class="container">
     		<div class="row product-row">
     			<div class="col-md-6 col-12">
