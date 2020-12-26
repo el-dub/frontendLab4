@@ -59,36 +59,39 @@ class EventListenersAddder {
 		}
 		const addListenersForOrderPage = (products) => {
 			let btnOrder = document.getElementById('btn_form_order');
+			let form = document.getQuerySelector('form');
 			btnOrder.onclick = () => {
-				const client = new Client();
-				const loader = new Loader();
-				let data = {
-					name: document.getElementById('inputName').value,
-					phone: document.getElementById('inputPhone').value,
-					email: document.getElementById('inputEmail').value,
-					city: document.getElementById('inputCity').value,
-					street: document.getElementById('inputStreet').value,
-					house: document.getElementById('inputHouse').value,
-					flat: document.getElementById('inputFlat').value,
-					entrance: document.getElementById('inputEntrance').value,
-					date: document.getElementById('inputDate').value,
-					time: document.getElementById('inputTime').value,
-					cost: getSum(getProductsInCart(products)).toFixed(2)
-				};
-				loader.showLoader();
-				const templateProcessor = new TemplateProcessor();
-				client.postOrder('orders', data)
-					.then(order => {
-						window.location.hash=`order/${order['id']}`;
-						templateProcessor.render(orderInfoView(order));
-			           
-			        }).catch(error => {
-			        	
-			        	templateProcessor.render(errorView(error));
-			        });
-			    clearCart();
-			    let cartSum = document.getElementById('cart_products_quantity');
-				cartSum.innerHTML = getCart();
+				if (form.checkValidity()) {
+			        const client = new Client();
+					const loader = new Loader();
+					let data = {
+						name: document.getElementById('inputName').value,
+						phone: document.getElementById('inputPhone').value,
+						email: document.getElementById('inputEmail').value,
+						city: document.getElementById('inputCity').value,
+						street: document.getElementById('inputStreet').value,
+						house: document.getElementById('inputHouse').value,
+						flat: document.getElementById('inputFlat').value,
+						entrance: document.getElementById('inputEntrance').value,
+						date: document.getElementById('inputDate').value,
+						time: document.getElementById('inputTime').value,
+						cost: getSum(getProductsInCart(products)).toFixed(2)
+					};
+					loader.showLoader();
+					const templateProcessor = new TemplateProcessor();
+					client.postOrder('orders', data)
+						.then(order => {
+							window.location.hash=`order/${order['id']}`;
+							templateProcessor.render(orderInfoView(order));
+				           
+				        }).catch(error => {
+				        	
+				        	templateProcessor.render(errorView(error));
+				        });
+				    clearCart();
+				    let cartSum = document.getElementById('cart_products_quantity');
+					cartSum.innerHTML = getCart();
+			    }
 			};
 
 			
