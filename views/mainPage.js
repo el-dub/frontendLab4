@@ -9,7 +9,7 @@ const view = (products) => `
 	    		</div>
 	    		<div class="row">
 	    			<div class="col-12">
-	    				<a href="action/crazy_tuesday">
+	    				<a href="#action/crazy_tuesday">
 	    					<div class="cart-page card">
 		    					<div class="row">
 		    						<div class="action-image" id="action1">
@@ -18,7 +18,7 @@ const view = (products) => `
 		    					</div>
 		    				</div>
 	    				</a>
-	    				<a href="action/20_for_everything">
+	    				<a href="#action/20_for_everything">
 	    					<div class="cart-page card">
 		    					<div class="row">
 		    						<div class="action-image" id="action2">
@@ -27,7 +27,7 @@ const view = (products) => `
 		    					</div>
 		    				</div>
 	    				</a>
-	    				<a href="action/nocontact_delivery">
+	    				<a href="#action/nocontact_delivery">
 	    					<div class="cart-page card">
 		    					<div class="row">
 		    						<div class="action-image" id="action3">
