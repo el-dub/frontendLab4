@@ -1,4 +1,4 @@
-import {addToCart, getProductsInCart, clearCart} from './cart.js';
+import {addToCart, getProductsInCart, clearCart, getSum, removeFromCart} from './cart.js';
 
 class EventListenersAddder {
     addEventListeners(viewName, products, filter){
@@ -34,18 +34,20 @@ class EventListenersAddder {
 		};
 		
 		const addListenersForCartPage = (products) => {
+			let cartSum = document.getElementById('cart_products_quantity');
+			let orderSum = document.getElementById('order_sum');
 			products.forEach((product) => {
 				let removeBt = document.getElementById('remove_bt_'+product.id).children[0];
 				removeBt.onclick = () =>{
 					removeBt.parentElement.parentElement.remove();
-
+					cartSum.innerHTML = removeFromCart(product.id);
+					orderSum.innerHTML = Math.round(getSum(productsInCart));
 				};
 			});
 			let orderBt = document.getElementById('btn_order');
 			orderBt.onclick = () => {
 				window.location.hash = 'order';
 			};
-
 		}
 
 		switch(viewName){
