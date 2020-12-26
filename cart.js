@@ -33,9 +33,15 @@ export function clearCart(){
     localStorage.clear();
 }
 export function getSum(productsInCart){
-    let sum = 0;
-    productsInCart.forEach((product) => sum+=(product.quantity*product.price));
-    return sum;
+    if(productsInCart){
+        let sum = 0;
+        productsInCart.forEach((product) => sum+=(product.quantity*product.price));
+        return sum;
+    }
+    else{
+        window.location.hash = 'order';
+    }
+    
 }
 export function removeFromCart(productId){
     const cart = (localStorage.getItem('cart')) ? JSON.parse(window.localStorage.getItem('cart')) : {};

@@ -42,7 +42,7 @@ class EventListenersAddder {
 					removeBt.onclick = () =>{
 						removeBt.parentElement.remove();
 						cartSum.innerHTML = removeFromCart(product.id);
-						orderSum.innerHTML = getSum(getProductsInCart()).toFixed(2);
+						orderSum.innerHTML = getSum(getProductsInCart(products)).toFixed(2);
 					};
 				});
 				let orderBt = document.getElementById('btn_order');
