@@ -39,7 +39,8 @@ class Router {
                         filterId = hash.split('/')[1];
                         break;
                     default:
-                        viewName = 'mainPage';
+                        viewName = 'catalogPage';
+                        endpointName = 'products';
                         break;
                 }
             }
@@ -50,8 +51,14 @@ class Router {
                         endpointName = 'products';
                         break;
                     case 'order':
-                        viewName = 'orderPage';
-                        endpointName = 'products';
+                        if(document.getElementById('cart_products_quantity').innerHTML==='0'){
+                            viewName = 'catalogPage';
+                            endpointName = 'products';
+                        }
+                        else{
+                            viewName = 'orderPage';
+                            endpointName = 'products';
+                        }
                         break;
                     case 'cart':
                         viewName = 'cartPage';
