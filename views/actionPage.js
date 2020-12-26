@@ -3,8 +3,8 @@ const view = (actions, actionUrl) => `
 	${actions.filter(action => action.url === actionUrl).map((action => `
 		<div class="container">
     		<div class="row product-row">
-    			<div class="col-md-6 col-12">
-    				<div class="product-page-image product-image mb-1 mt-1">
+    			<div class="col-md-6 col-12 d-flex">
+    				<div class="product-page-image product-image mb-1 mt-1 align-self-center">
 						<img src=${action.image} alt=${action.name}>
 					</div>
     			</div>

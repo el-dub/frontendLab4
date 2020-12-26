@@ -7,18 +7,6 @@ import orderInfoView from './views/orderInfoPage.js';
 
 class EventListenersAddder {
     addEventListeners(viewName, products, filter){
-    	/*const addListenersForButtonsInCatalog = (products, categoryId) => {
-    		if(categoryId)
-				products = products.filter(product => product.categoryId === Number(categoryId));
-			let cartSum = document.getElementById('cart_products_quantity');
-			products.forEach((product) => {
-				let productBt = document.getElementById('btn_product_'+product.id);
-				productBt.onclick = () =>{
-					cartSum.innerHTML = addToCart(product.id, 1);
-					event.stopPropagation()
-				};
-			});
-    	};*/
     	const addListenersForProductPage = (products, productUrl) => {
 			let product = products.filter(product => product.url === productUrl)[0];
 			let plusBt = document.getElementById('plus_product');
@@ -98,12 +86,6 @@ class EventListenersAddder {
 		}
 
 		switch(viewName){
-			case 'catalogPage':
-				//addListenersForButtonsInCatalog(products);
-				break;
-			case 'categoryProductsPage':
-				//addListenersForButtonsInCatalog(products, filter);
-				break;
 			case 'productPage':
 				addListenersForProductPage(products, filter);
 				break;
@@ -112,6 +94,8 @@ class EventListenersAddder {
 				break;
 			case 'orderPage':
 				addListenersForOrderPage(products);
+				break;
+			default
 				break;
 		}
 	}
