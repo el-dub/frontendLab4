@@ -8,9 +8,9 @@ class EventListenersAddder {
 			let cartSum = document.getElementById('cart_products_quantity');
 			products.forEach((product) => {
 				let productBt = document.getElementById('btn_product_'+product.id);
-				productBt.onclick = (event) =>{
+				productBt.onclick = () =>{
 					cartSum.innerHTML = addToCart(product.id, 1);
-					event.stopPropagation();
+					event.stopPropagation()
 				};
 			});
     	};
@@ -35,9 +35,10 @@ class EventListenersAddder {
 		
 		const addListenersForCartPage = (products) => {
 			products.forEach((product) => {
-				let removeBt = document.getElementById('remove_bt_'+product.id);
+				let removeBt = document.getElementById('remove_bt_'+product.id).children[0];
 				removeBt.onclick = () =>{
-					removeBt.parentElement.remove();
+					removeBt.parentElement.parentElement.remove();
+
 				};
 			});
 			let orderBt = document.getElementById('btn_order');
@@ -49,7 +50,7 @@ class EventListenersAddder {
 
 		switch(viewName){
 			case 'catalogPage':
-				addListenersForButtonsInCatalog(products);
+				//addListenersForButtonsInCatalog(products);
 				break;
 			case 'categoryProductsPage':
 				addListenersForButtonsInCatalog(products, filter);

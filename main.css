@@ -107,7 +107,7 @@ main{
 	padding: 5px;
 	transition: all .3s ease;
     border-radius: 15px;
-    height: 386px;
+    height: 320px;
 }
 .card:hover{
 	box-shadow: 0 0 15px rgba(0,0,0,.5);
@@ -139,7 +139,7 @@ main{
     border-radius: 15px;
 }
 .price-buy{
-	padding-left: 20px;
+	padding-left: 0!important;
     align-self: center;
 }
 .product-price{
