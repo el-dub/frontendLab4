@@ -15,9 +15,7 @@ const view = (actions, actionUrl) => `
     					</h1>
     				</div>
     				<div class="mb-2">
-    					<span class="product-weight-title">Вес: </span>
     					<span>${action.date}</span>
-    					<span>г</span>
     				</div>
     				<div class="mb-2">
     					${action.description}
