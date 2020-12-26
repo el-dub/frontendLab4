@@ -1,4 +1,4 @@
-import {addToCart, getProductsInCart, clearCart, getSum, removeFromCart} from './cart.js';
+import {addToCart, getProductsInCart, clearCart, getSum, removeFromCart, getCart} from './cart.js';
 import Client from './client.js';
 import Loader from './loader.js';
 import TemplateProcessor from './templateProcessor.js';
@@ -63,16 +63,16 @@ class EventListenersAddder {
 				const client = new Client();
 				const loader = new Loader();
 				let data = {
-					name: document.getElementById('inputName'),
-					phone: document.getElementById('inputPhone'),
-					email: document.getElementById('inputEmail'),
-					city: document.getElementById('inputCity'),
-					street: document.getElementById('inputStreet'),
-					house: document.getElementById('inputHouse'),
-					flat: document.getElementById('inputFlat'),
-					entrance: document.getElementById('inputEntrance'),
-					date: document.getElementById('inputDate'),
-					time: document.getElementById('inputTime'),
+					name: document.getElementById('inputName').value,
+					phone: document.getElementById('inputPhone').value,
+					email: document.getElementById('inputEmail').value,
+					city: document.getElementById('inputCity').value,
+					street: document.getElementById('inputStreet').value,
+					house: document.getElementById('inputHouse').value,
+					flat: document.getElementById('inputFlat').value,
+					entrance: document.getElementById('inputEntrance').value,
+					date: document.getElementById('inputDate').value,
+					time: document.getElementById('inputTime').value,
 					cost: getSum(getProductsInCart(products)).toFixed(2)
 				};
 				loader.showLoader();
