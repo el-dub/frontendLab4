@@ -38,10 +38,7 @@ class Router {
                         endpointName = 'actions';
                         filterId = hash.split('/')[1];
                         break;
-                    case 'order':
-                        if(document.getElementById('cart_products_quantity').innerHTML==='0'){
-                            window.location.hash = 'catalog';
-                        }                        
+                    case 'order':                      
                         break;
                     default:
                         viewName = 'catalogPage';
