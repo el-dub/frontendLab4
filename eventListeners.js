@@ -59,7 +59,7 @@ class EventListenersAddder {
 		}
 		const addListenersForOrderPage = (products) => {
 			let btnOrder = document.getElementById('btn_form_order');
-			let form = document.getQuerySelector('form');
+			let form = document.querySelector('form');
 			btnOrder.onclick = () => {
 				if (form.checkValidity()) {
 			        const client = new Client();
