@@ -2,7 +2,7 @@ import {addToCart, getProductsInCart, clearCart, getSum, removeFromCart} from '.
 
 class EventListenersAddder {
     addEventListeners(viewName, products, filter){
-    	const addListenersForButtonsInCatalog = (products, categoryId) => {
+    	/*const addListenersForButtonsInCatalog = (products, categoryId) => {
     		if(categoryId)
 				products = products.filter(product => product.categoryId === Number(categoryId));
 			let cartSum = document.getElementById('cart_products_quantity');
@@ -13,7 +13,7 @@ class EventListenersAddder {
 					event.stopPropagation()
 				};
 			});
-    	};
+    	};*/
     	const addListenersForProductPage = (products, productUrl) => {
 			let product = products.filter(product => product.url === productUrl)[0];
 			let plusBt = document.getElementById('plus_product');

@@ -39,7 +39,7 @@ export function getSum(productsInCart){
         return sum;
     }
     else{
-        window.location.hash = 'order';
+        window.location.hash = 'cart';
     }
     
 }
