@@ -36,18 +36,21 @@ class EventListenersAddder {
 		const addListenersForCartPage = (products) => {
 			let cartSum = document.getElementById('cart_products_quantity');
 			let orderSum = document.getElementById('order_sum');
-			products.forEach((product) => {
-				let removeBt = document.getElementById('remove_bt_'+product.id);
-				removeBt.onclick = () =>{
-					removeBt.parentElement.remove();
-					cartSum.innerHTML = removeFromCart(product.id);
-					orderSum.innerHTML = getSum(products).toFixed(2);
+			if(products){
+				products.forEach((product) => {
+					let removeBt = document.getElementById('remove_bt_'+product.id);
+					removeBt.onclick = () =>{
+						removeBt.parentElement.remove();
+						cartSum.innerHTML = removeFromCart(product.id);
+						orderSum.innerHTML = getSum(getProductsInCart()).toFixed(2);
+					};
+				});
+				let orderBt = document.getElementById('btn_order');
+				orderBt.onclick = () => {
+					window.location.hash = 'order';
 				};
-			});
-			let orderBt = document.getElementById('btn_order');
-			orderBt.onclick = () => {
-				window.location.hash = 'order';
-			};
+			}
+			
 		}
 
 		switch(viewName){
