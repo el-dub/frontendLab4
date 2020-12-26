@@ -38,8 +38,7 @@ export function getSum(productsInCart){
         productsInCart.forEach((product) => sum+=(product.quantity*product.price));
         return sum;
     }
-    else{
-        return 0;
+    else return 0;
     
 }
 export function removeFromCart(productId){
