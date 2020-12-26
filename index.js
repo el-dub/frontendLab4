@@ -42,6 +42,7 @@ window.onhashchange = () => {
 	    })
 	    .then((data) => {
 	    	if(viewName==='cartPage'||viewName==='orderPage') data = getProductsInCart(data);
+	    	if(viewName==='') return;
 	        templateProcessor.render(view(data, filterId, filterName));
 	        eventsAddder.addEventListeners(viewName, data, filterId);
 	    });

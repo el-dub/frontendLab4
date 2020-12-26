@@ -38,6 +38,8 @@ class Router {
                         endpointName = 'actions';
                         filterId = hash.split('/')[1];
                         break;
+                    case 'order':
+                        break;
                     default:
                         viewName = 'catalogPage';
                         endpointName = 'products';

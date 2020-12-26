@@ -18,7 +18,6 @@ const view = (order) => `
 							</div>
 						</div>
 					</div>
-
 		   		</div>
 	    	</div>
     	</div>      	

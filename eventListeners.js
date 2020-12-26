@@ -2,7 +2,8 @@ import {addToCart, getProductsInCart, clearCart, getSum, removeFromCart} from '.
 import Client from './client.js';
 import Loader from './loader.js';
 import TemplateProcessor from './templateProcessor.js';
-import view from './views/errorPage.js';
+import errorView from './views/errorPage.js';
+import orderInfoView from './views/orderInfoPage.js';
 
 class EventListenersAddder {
     addEventListeners(viewName, products, filter){
@@ -75,13 +76,15 @@ class EventListenersAddder {
 					time: document.getElementById('inputTime'),
 					cost: getSum(getProductsInCart(products)).toFixed(2)
 				};
+				const templateProcessor = new TemplateProcessor();
 				client.postOrder('orders', data)
 					.then(order => {
 						window.location.hash=`order/${order['id']}`;
+						templateProcessor.render(orderInfoView(order));
 			           
 			        }).catch(error => {
-			        	const templateProcessor = new TemplateProcessor();
-			        	templateProcessor.render(view(error));
+			        	
+			        	templateProcessor.render(errorView(error));
 			        });
 			    clearCart();
 			};
