@@ -95,7 +95,7 @@ class EventListenersAddder {
 			case 'orderPage':
 				addListenersForOrderPage(products);
 				break;
-			default
+			default:
 				break;
 		}
 	}
