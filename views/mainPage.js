@@ -1,5 +1,45 @@
 const view = (products) => `
 <main id="main">
+		<div class="container">
+    		<div class="products-section">
+    			<div class="row">
+	    			<div class="order-title text-center col-12">
+	    				Акции
+	    			</div>
+	    		</div>
+	    		<div class="row">
+	    			<div class="col-12">
+	    				<a href="action/crazy_tuesday">
+	    					<div class="cart-page card">
+		    					<div class="row">
+		    						<div class="action-image" id="action1">
+		    							
+		    						</div>
+		    					</div>
+		    				</div>
+	    				</a>
+	    				<a href="action/20_for_everything">
+	    					<div class="cart-page card">
+		    					<div class="row">
+		    						<div class="action-image" id="action2">
+		    							
+		    						</div>
+		    					</div>
+		    				</div>
+	    				</a>
+	    				<a href="action/nocontact_delivery">
+	    					<div class="cart-page card">
+		    					<div class="row">
+		    						<div class="action-image" id="action3">
+		    							
+		    						</div>
+		    					</div>
+		    				</div>
+	    				</a>
+	    			</div>
+	    		</div>
+    		</div>
+    	</div>
     <div class="container">
     	<div class="products-section">
 	    	<div class="row">

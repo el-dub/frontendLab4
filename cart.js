@@ -39,8 +39,7 @@ export function getSum(productsInCart){
         return sum;
     }
     else{
-        window.location.hash = 'cart';
-    }
+        return 0;
     
 }
 export function removeFromCart(productId){

@@ -431,6 +431,32 @@ footer{
     align-items: center;
     height: 90vh;
 }
+/*--------------------*/
+/*actions*/
+
+.action-image{
+    width: 95%;
+    height: 278px;
+    margin-left: auto;
+    margin-right: auto;
+    background-size: auto 100%;
+    border-radius: 15px;
+}
+#action1{
+    background: url('https://media.dominos.ua/__sized__/promotions/promotions_image/2020/10/29/unicorn-vtornik--80_news-crop-c0-5__0-5-2300x1352-70.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#action2{
+    background: url('https://media.dominos.ua/__sized__/promotions/promotions_image/2020/09/23/-20_new-crop-c0-5__0-5-2300x1352-70.jpg');
+    background-size: cover;
+    background-position: center;
+}
+#action3{
+    background: url('https://media.dominos.ua/__sized__/news/news_image/2020/03/16/dost_news-crop-c0-5__0-5-1150x675-70.jpg');
+    background-size: cover;
+    background-position: center;
+}
 img {
 	width: 100%;
     height: 100%;
