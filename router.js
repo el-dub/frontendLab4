@@ -39,7 +39,9 @@ class Router {
                         filterId = hash.split('/')[1];
                         break;
                     case 'order':
-                        window.location.hash = 'catalog';
+                        if(document.getElementById('cart_products_quantity').innerHTML==='0'){
+                            window.location.hash = 'catalog';
+                        }                        
                         break;
                     default:
                         viewName = 'catalogPage';
@@ -55,8 +57,7 @@ class Router {
                         break;
                     case 'order':
                         if(document.getElementById('cart_products_quantity').innerHTML==='0'){
-                            viewName = 'catalogPage';
-                            endpointName = 'products';
+                            window.location.hash = 'catalog';
                         }
                         else{
                             viewName = 'orderPage';
