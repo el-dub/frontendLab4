@@ -13,39 +13,43 @@ const eventsAddder = new EventListenersAddder();
 
 window.onload = () => {
 	let { viewName, endpointName, filterId, filterName } = router.getCurrentState();
-    let view;
-    loader.showLoader();
-    import(`./views/${viewName}.js`)
-	    .then((viewModule) =>  {
-	        view = viewModule.default;
-	        if(endpointName!=='') return client.getData(endpointName);
-	        else return null;
-	    })
-	    .then((data) => {
-	        if(viewName==='cartPage'||viewName==='orderPage') data = getProductsInCart(data);
-	        templateProcessor.render(view(data, filterId, filterName));
-	        eventsAddder.addEventListeners(viewName, data, filterId);
-	    });
+	if(viewName!==''){
+		let view;
+	    loader.showLoader();
+	    import(`./views/${viewName}.js`)
+		    .then((viewModule) =>  {
+		        view = viewModule.default;
+		        if(endpointName!=='') return client.getData(endpointName);
+		        else return null;
+		    })
+		    .then((data) => {
+		        if(viewName==='cartPage'||viewName==='orderPage') data = getProductsInCart(data);
+		        templateProcessor.render(view(data, filterId, filterName));
+		        eventsAddder.addEventListeners(viewName, data, filterId);
+		    });
+	}
+    
 	let cartSum = document.getElementById('cart_products_quantity');
 	cartSum.innerHTML = getCart();
 }
 
 window.onhashchange = () => {
     let { viewName, endpointName, filterId, filterName } = router.getCurrentState();
-    let view;
-    loader.showLoader();
-	import(`./views/${viewName}.js`)
-	    .then((viewModule) =>  {
-	        view = viewModule.default;
-	        if(endpointName!=='') return client.getData(endpointName);
-	        else return null;
-	    })
-	    .then((data) => {
-	    	if(viewName==='cartPage'||viewName==='orderPage') data = getProductsInCart(data);
-	    	if(viewName==='') return;
-	        templateProcessor.render(view(data, filterId, filterName));
-	        eventsAddder.addEventListeners(viewName, data, filterId);
-	    });
+    	if(viewName!==''){
+		let view;
+	    loader.showLoader();
+	    import(`./views/${viewName}.js`)
+		    .then((viewModule) =>  {
+		        view = viewModule.default;
+		        if(endpointName!=='') return client.getData(endpointName);
+		        else return null;
+		    })
+		    .then((data) => {
+		        if(viewName==='cartPage'||viewName==='orderPage') data = getProductsInCart(data);
+		        templateProcessor.render(view(data, filterId, filterName));
+		        eventsAddder.addEventListeners(viewName, data, filterId);
+		    });
+	}
 };
 
 

@@ -3,8 +3,7 @@ const view = (error) => `
 <main id="main">
     <div class="container">
 	    <div class="row">
-	    	Error
-		    ${error.message}		
+	    	Error ${error.message}		
 		</div>
     </div>      	
 </main>

@@ -87,6 +87,7 @@ class EventListenersAddder {
 			        	templateProcessor.render(errorView(error));
 			        });
 			    clearCart();
+			    
 			};
 
 			
