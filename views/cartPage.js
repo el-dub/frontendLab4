@@ -27,7 +27,7 @@ const view = (productsInCart) => ((!productsInCart) ? `<main id="main">
 				    			${productsInCart.map(product => `
 				    				<div class="row cart-product-row">
 				    					<div id="remove_bt_${product.id}" class="removeBt"><img src="https://img.icons8.com/material/24/000000/delete-sign--v1.png"></div>
-				    					<div class="row product-info-row col-11">
+				    					<div class="product-info-row col-11">
 				    						<div class="col-6">
 				    							<div>${product.productName}</div>
 				    						</div>
@@ -49,7 +49,7 @@ const view = (productsInCart) => ((!productsInCart) ? `<main id="main">
 				    	</div>
 				    	<div class="row mt-3">
 		    				<div class="order-title">
-		    					<span>Всего: </span><span>${Math.round(getSum(productsInCart))}</span><span> грн</span>
+		    					<span>Всего: </span><span id="order_sum">${Math.round10(getSum(productsInCart))}</span><span> грн</span>
 		    				</div>
 		    			</div>
 		    			<div class="row price-buy-row justify-content-center">

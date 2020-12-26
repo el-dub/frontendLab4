@@ -37,11 +37,11 @@ class EventListenersAddder {
 			let cartSum = document.getElementById('cart_products_quantity');
 			let orderSum = document.getElementById('order_sum');
 			products.forEach((product) => {
-				let removeBt = document.getElementById('remove_bt_'+product.id).children[0];
+				let removeBt = document.getElementById('remove_bt_'+product.id);
 				removeBt.onclick = () =>{
-					removeBt.parentElement.parentElement.remove();
+					removeBt.parentElement.remove();
 					cartSum.innerHTML = removeFromCart(product.id);
-					orderSum.innerHTML = Math.round(getSum(productsInCart));
+					orderSum.innerHTML = Math.round10(getSum(products));
 				};
 			});
 			let orderBt = document.getElementById('btn_order');
