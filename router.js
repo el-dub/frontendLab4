@@ -73,7 +73,7 @@ class Router {
             }
         }
         else{
-            viewName = 'catalogPage';
+            viewName = 'mainPage';
             endpointName = 'products';
         }
         return {
