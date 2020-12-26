@@ -13,13 +13,13 @@ const view = (productsInCart) => `
 				                    <label for="exampleInputEmail1">Контакты</label>
 				                    <div class="row">
 				                    	<div class="input col-4">
-				                    		<input type="text" class="form-control" id="inputName" placeholder="Имя">
+				                    		<input type="text" class="form-control" id="inputName" placeholder="Имя" required>
 				                    	</div>
 				                    	<div class="input col-4">
-				                    		<input type="tel" class="form-control" id="inputPhone" placeholder="Телефон">
+				                    		<input type="tel" class="form-control" id="inputPhone" placeholder="Телефон" required>
 				                    	</div>
 				                    	<div class="input col-4">
-				                    		<input type="email" class="form-control" id="inputEmail" placeholder="Email">
+				                    		<input type="email" class="form-control" id="inputEmail" placeholder="Email" required>
 				                    	</div>
 				                    		
 				                    </div>
@@ -38,13 +38,13 @@ const view = (productsInCart) => `
 						                    </select>
 				                    	</div>		
 				                    	<div class="input col-4">
-				                    		<input type="text" class="form-control" id="inputStreet" placeholder="Улица">
+				                    		<input type="text" class="form-control" id="inputStreet" placeholder="Улица" required>
 				                    	</div>
 				                    			                    		
 				                    </div>
 				                    <div class="row">
 				                    	<div class="input col-4">
-				                    		<input type="text" class="form-control" id="inputHouse" placeholder="Дом">
+				                    		<input type="text" class="form-control" id="inputHouse" placeholder="Дом" required>
 				                    	</div>
 				                    	<div class="input col-4">
 				                    		<input type="text" class="form-control" id="inputFlat" placeholder="Квартира">
@@ -78,10 +78,10 @@ const view = (productsInCart) => `
 				                    <label for="exampleInputEmail1">Дата и время доставки</label>
 				                    <div class="row">
 				                    	<div class="input col-6">
-				                    		<input type="date" class="form-control" id="inputDate">
+				                    		<input type="date" class="form-control" id="inputDate" required>
 				                    	</div>
 				                    	<div class="input col-6">
-				                    		<select class="form-control" id="inputTime">
+				                    		<select class="form-control" id="inputTime" required>
 						                      <option>00:00</option>
 						                      <option>01:00</option>
 						                      <option>02:00</option>
