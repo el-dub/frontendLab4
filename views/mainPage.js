@@ -15,18 +15,13 @@ const view = (products) => `
 								  		<img src=${product.image} alt=${product.productName}>
 									</div>
 									<div class="card-body">
-								  	  	<h5 class="card-title">${product.productName}</h5>
-								   		<h6 class="card-subtitle text-muted">${product.productDescription}</h6>
-									</div>
-						        	<div class="row price-buy-row card-body">
-						          		<div class="price-buy col-6"> 
-						          			<span class="product-price">${product.price}</span>
-						          			<span class="product-currency">грн</span>
-						          		</div>
-						          		<div class="bs-component col-6">
-							        	  	<button type="button" class="btn btn-danger">В корзину</button>
-							       		 </div>
-						        	</div>
+								    <h5 class="card-title">${product.productName}</h5>
+								    <h6 class="card-subtitle text-muted">${product.productDescription}</h6>
+								    <div class="price-buy col-12 mt-3"> 
+						          		<span class="product-price">${product.price}</span>
+						          		<span class="product-currency">грн</span>
+						          	</div>
+								  </div>
 								</div>
 							</a>
 		    			</div>
