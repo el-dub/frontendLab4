@@ -39,6 +39,7 @@ class Router {
                         filterId = hash.split('/')[1];
                         break;
                     case 'order':
+                        window.location.hash = 'catalog';
                         break;
                     default:
                         viewName = 'catalogPage';
