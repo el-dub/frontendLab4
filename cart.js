@@ -9,6 +9,16 @@ export function addToCart(productId, quantity){
     }
     return sum;
 }
+export function getCart(){
+    onst cart = (localStorage.getItem('cart')) ? JSON.parse(window.localStorage.getItem('cart')) : {};
+    window.localStorage.setItem('cart', JSON.stringify(cart));
+    let sum = 0;
+    let values = Object.values(cart);
+    for(let value of values){
+        sum+=value;
+    }
+    return sum;
+}
 export function getProductsInCart(products){
     const cart = (localStorage.getItem('cart')) ? JSON.parse(localStorage.getItem('cart')) : {};
     if(Object.keys(cart).length!==0) {

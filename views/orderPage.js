@@ -112,7 +112,7 @@ const view = (productsInCart) => `
 				                  </div>
 				                  <div class="row price-buy-row justify-content-center mb-3">
 					                	<div class="price-buy col-6 text-center"> 
-							          		<span class="product-price">${Math.round10(getSum(productsInCart))}</span>
+							          		<span class="product-price">${getSum(productsInCart).toFixed(2)}</span>
 							          		<span class="product-currency"> грн</span>
 							          	</div>
 					              </div>

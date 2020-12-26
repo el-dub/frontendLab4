@@ -2,7 +2,7 @@ import TemplateProcessor from './templateProcessor.js';
 import Client from './client.js';
 import Router from './router.js';
 import Loader from './loader.js';
-import {getProductsInCart} from './cart.js';
+import {getProductsInCart, getCart} from './cart.js';
 import EventListenersAddder from './eventListeners.js';
 
 const router = new Router();
@@ -26,6 +26,8 @@ window.onload = () => {
 	        templateProcessor.render(view(data, filterId, filterName));
 	        eventsAddder.addEventListeners(viewName, data, filterId);
 	    });
+	let cartSum = document.getElementById('cart_products_quantity');
+	cartSum.innerHTML = getCart();
 }
 
 window.onhashchange = () => {
